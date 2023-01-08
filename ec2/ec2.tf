@@ -51,6 +51,7 @@ resource "aws_security_group" "ec2_sg" {
   egress {
     from_port   = 0
     to_port     = 0
+    description = "allows for all access"
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }

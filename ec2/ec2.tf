@@ -27,6 +27,7 @@ resource "aws_security_group" "ec2_sg" {
   ingress {
     from_port   = 22
     to_port     = 22
+    description = "allows for ssh"
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -34,6 +35,7 @@ resource "aws_security_group" "ec2_sg" {
   ingress {
     from_port   = 9100
     to_port     = 9100
+    description = "allows for proxy"
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -41,6 +43,7 @@ resource "aws_security_group" "ec2_sg" {
   ingress {
     from_port   = 8080
     to_port     = 8080
+    description = "allows for proxxy"
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }

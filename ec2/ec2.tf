@@ -43,7 +43,7 @@ resource "aws_security_group" "ec2_sg" {
   ingress {
     from_port   = 8080
     to_port     = 8080
-    description = "allows for proxxy"
+    #description = "allows for proxxy"
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
